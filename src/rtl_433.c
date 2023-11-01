@@ -1988,11 +1988,6 @@ int main(int argc, char **argv) {
         }
     }
 
-    if (cfg->duration > 0) {
-        time(&cfg->stop_time);
-        cfg->stop_time += cfg->duration;
-    }
-
     time(&cfg->hop_start_time);
 
     // add dummy socket to receive broadcasts
