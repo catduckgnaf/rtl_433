@@ -190,6 +190,19 @@ mappings = {
         }
     },
 
+    "battery_mV": {
+        "device_type": "sensor",
+        "object_suffix": "mV",
+        "config": {
+            "device_class": "voltage",
+            "name": "Battery mV",
+            "unit_of_measurement": "mV",
+            "value_template": "{{ float(value) }}",
+            "state_class": "measurement",
+            "entity_category": "diagnostic"
+        }
+    },
+
     "humidity": {
         "device_type": "sensor",
         "object_suffix": "H",
@@ -226,9 +239,9 @@ mappings = {
 
     "moisture": {
         "device_type": "sensor",
-        "object_suffix": "H",
+        "object_suffix": "M",
         "config": {
-            "device_class": "humidity",
+            "device_class": "moisture",
             "name": "Moisture",
             "unit_of_measurement": "%",
             "value_template": "{{ value|float }}",
@@ -521,7 +534,7 @@ mappings = {
             "state_class": "measurement"
         }
     },
-  
+
     "energy_kWh": {
         "device_type": "sensor",
         "object_suffix": "kwh",
@@ -533,7 +546,7 @@ mappings = {
             "state_class": "measurement"
         }
     },
-  
+
     "current_A": {
         "device_type": "sensor",
         "object_suffix": "A",
@@ -545,7 +558,7 @@ mappings = {
             "state_class": "measurement"
         }
     },
-  
+
     "voltage_V": {
         "device_type": "sensor",
         "object_suffix": "V",
@@ -643,7 +656,7 @@ mappings = {
             "state_class": "total_increasing",
         }
     },
-  
+
     "consumption": {
         "device_type": "sensor",
         "object_suffix": "consumption",
